@@ -18,7 +18,7 @@ def home():
 		ping = round(res["ping"])
 		client = res["client"]["isp"]
 		country = res["client"]["country"]
-		print("-->Download Speed: {:.2f} Kb/s\n-->Upload Speed: {:.2f} Kb/s\n-->Ping: {}\n-->ISP: {}, {}".format(download,upload,ping, client,country))
+		print("-->Download Speed: {:.2f} Mbps\n-->Upload Speed: {:.2f} Mbps\n-->Ping: {}\n-->ISP: {}, {}".format(download,upload,ping, client,country))
 		return render_template('home.html', download=download, upload=upload,ping=ping,client=client)
 	else:
 		return render_template('home.html', download=0, upload=0,ping=0,client="---")	
